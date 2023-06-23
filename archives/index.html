@@ -581,8 +581,7 @@
                         <a href="/2023/06/23/matery-shi-yong-zhi-nan/">
                             <div class="card-image">
                                 
-                                
-                                <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="matery使用指南">
+                                <img src="/%5Cimages%5C0623_1.jpg" class="responsive-img" alt="matery使用指南">
                                 
                                 <span class="card-title">matery使用指南</span>
                             </div>
@@ -590,9 +589,7 @@
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    matery主题使用指南QQ 交流群1（已满）: 926552981 | QQ 交流群2（已满）: 971887688 | QQ 交流群3（推荐）: 670694035
-
-这是一个采用 Material Design 和响应式设计的 Hex
+                                    “matery主题”是一个采用 `Material Design` 和响应式设计的 Hexo 博客主题。
                                 
                             </div>
                             <div class="publish-info">
@@ -601,8 +598,12 @@
                                 </span>
                                 <span class="publish-author">
                                     
-                                    <i class="fas fa-user fa-fw"></i>
-                                    Shanxin
+                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
@@ -635,12 +636,16 @@
 <style>
     .aplayer .aplayer-lrc p {
         
+        display: none;
+        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -692,6 +697,8 @@
             <a href="/about" target="_blank">Shan Xin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
             
             <br>
             
@@ -901,6 +908,17 @@ $(function () {
     
 
     
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://example.com"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
     
     
 
@@ -952,6 +970,10 @@ $(function () {
     
 
     <!--腾讯兔小巢-->
+    
+        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/597128"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
+        </div>
     
     
     <script type="text/javascript" color="0,0,255"
